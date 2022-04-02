@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biggest Catch</title>
+    <link rel="stylesheet" href="static/styles.css" />
+    <script src="./app.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Biggest Catch</h1>
+      <nav id="navigation">
+        <a id="homeBtn" class="active">Home</a>
+        <div id="guest">
+          <a id="loginBtn" href="javascript:void(0)">Login</a>
+          <a id="registerBtn" href="javascript:void(0)">Register</a>
+        </div>
+        <div id="user">
+          <a id="logoutBtn" href="javascript:void(0)">Logout</a>
+        </div>
+      </nav>
+    </header>
+    <main id="container"></main>
+
+    <div class="views">
+      <div class="catchSection">
+        <fieldset id="main">
+          <legend>Catches</legend>
+          <div id="catches"></div>
+        </fieldset>
+        <aside>
+          <button class="load">Load</button>
+          <fieldset id="addForm">
+            <legend>Add Catch</legend>
+            <label>Angler</label>
+            <input type="text" class="angler" />
+            <label>Weight</label>
+            <input type="number" class="weight" />
+            <label>Species</label>
+            <input type="text" class="species" />
+            <label>Location</label>
+            <input type="text" class="location" />
+            <label>Bait</label>
+            <input type="text" class="bait" />
+            <label>Capture Time</label>
+            <input type="number" class="captureTime" />
+            <button class="add">Add</button>
+          </fieldset>
+        </aside>
+      </div>
+      <div class="loginSection">
+        <div id="container">
+          <div id="exercise">
+            <div class="wrapper">
+              <div class="card-wrapper">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2>Login</h2>
+                    <form>
+                      <label>E-mail: <input type="text" name="email" /></label>
+                      <label
+                        >Password: <input type="password" name="password"
+                      /></label>
+                      <button>Login</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="registerSection">
+        <div id="container">
+          <div id="exercise">
+            <div class="wrapper">
+              <div class="card-wrapper">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2>Register</h2>
+                    <form>
+                      <label>E-mail: <input type="text" name="email" /></label>
+                      <label
+                        >Password: <input type="password" name="password"
+                      /></label>
+                      <label
+                        >Repeat: <input type="password" name="rePass"
+                      /></label>
+                      <button>Register</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <textarea rows="4" cols="50" disabled></textarea>
+                <button>Buy</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -61,5 +61,5 @@ const onDonation = async (event, ctx) => {
   event.preventDefault();
   const petId = ctx.pet._id;
   await petsService.donate(petId);
-  ctx.page.redirect(petId);
+  ctx.page.redirect(`/details/${petId}`);
 };

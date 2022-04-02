@@ -8,6 +8,7 @@ export const preloadMiddleware = async (ctx, next) => {
     ctx.hasDonated = await petsService.hasDonated(pet._id, ctx.user._id);
   }
 
+  ctx.donations = await petsService.donationCounts(petId);
   ctx.pet = pet;
   next();
 };

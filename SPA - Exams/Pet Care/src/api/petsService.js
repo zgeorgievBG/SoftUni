@@ -9,6 +9,8 @@ const endpoints = {
   hasDonated: (petId, userId) =>
     `/data/donation?where=petId%3D%22${petId}%22%20and%20_ownerId%3D%22${userId}%22&count`,
   donate: "/data/donation",
+  donations: (petId) =>
+    `/data/donation?where=petId%3D%22${petId}%22&distinct=_ownerId&count`,
 };
 
 export async function getAll() {
@@ -37,4 +39,8 @@ export async function hasDonated(petId, userId) {
 
 export async function donate(petId) {
   return await api.post(endpoints.donate, { petId });
+}
+
+export async function donationCounts(petId) {
+  return await api.get(endpoints.donations(petId));
 }

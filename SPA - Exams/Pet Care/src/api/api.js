@@ -24,9 +24,10 @@ async function request(method, url, data) {
     if (!response.ok) {
       if (response.status == 403) {
         clearUserData();
+      } else {
+        const error = await response.json();
+        throw new Error(error.message);
       }
-      const error = await response.json();
-      throw new Error(error.message);
     }
     if (response.status == 204) {
       return response;
